@@ -1,5 +1,7 @@
 # Witty Board
 
+![board](board.jpg)
+
 ## Hardware
 
 Espressif ESP8266 chip
