@@ -1,5 +1,6 @@
 import machine
 import time
+import math
 
 led_r = machine.PWM(machine.Pin(15, machine.Pin.OUT), freq=1000, duty=0)
 led_g = machine.PWM(machine.Pin(12, machine.Pin.OUT), freq=1000, duty=0)
