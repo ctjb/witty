@@ -6,8 +6,6 @@ void setup() {
 }
 
 void loop() {
-  Serial.print("ahoj!");
-
   analogWrite(RED, 1023);
   analogWrite(GREEN, 0);
   analogWrite(BLUE, 0);
