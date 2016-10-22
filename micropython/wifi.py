@@ -8,9 +8,12 @@ nic.connect('SSID', 'password')
 addr = socket.getaddrinfo('ctjb.net', 80)[0][-1]
 sock = socket.socket()
 sock.connect(addr)
-sock.send(b'GET / HTTP/1.1\r\nHost: ctjb.net\r\n\r\n')
-data = sock.recv(1024)
-sock.close()
-data = data.decode('ascii')
+sock.send(b'GET /kontakt?do=export_raw HTTP/1.1\r\nHost: ctjb.net\r\nConnection: close\r\n\r\n')
 
-print(data)
+while True:
+    data = sock.recv(1024)
+    print(data)
+    if not data:
+        break
+
+sock.close()
